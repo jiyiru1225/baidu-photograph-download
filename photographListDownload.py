@@ -53,7 +53,7 @@ class photographListDownload:
         self.need_filter_hidden = json_data["need_filter_hidden"]
         self.headers["Cookie"] = json_data["Cookie"]
 
-        os.makedirs(self.path)
+        os.makedirs(self.path, exist_ok=True)
 
         self.func()
 if __name__ == "__main__":
